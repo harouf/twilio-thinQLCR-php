@@ -25,7 +25,7 @@ class TwilioWrapper {
         return $this->client != null && $this->client->account != null;
     }
 
-    public function call($from, $to, $)
+    public function call($from, $to)
     {
         if(!$this->isClientValid()) {
             return "Invalid Twilio Account details.";
