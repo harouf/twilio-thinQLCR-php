@@ -1,5 +1,5 @@
 {
-    "name": "harouf/twilio-thinQLCR-php",
+    "name": "harouf/twilio-thinqlcr-php",
     "description": "Twilio Wrapper PHP Library For thinQ LCR integration.",
     "license": "MIT",
     "repositories": [
