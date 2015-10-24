@@ -1,5 +1,5 @@
 <?php
-namespace TwilioWithThinq;
+namespace TwilioWithThinQLCR;
 //require_once __DIR__ . '/../../vendor/autoload.php'; // Loads the library
 use Services_Twilio;
 
@@ -32,7 +32,7 @@ class TwilioWrapper {
         }
 
         try{
-            $call = $this->client->account->calls->create($from, "sip:" . $to . "@". self::DOMAIN, self::TWIML_RESOURCE_URL, array( 'thinQid' => $this->thinQ_id, 'thinQtoken' => $this->thinQ_token ));
+            $call = $this->client->account->calls->create($from, "sip:" . $to . "@". self::THINQ_DOMAIN, self::TWIML_RESOURCE_URL, array( 'thinQid' => $this->thinQ_id, 'thinQtoken' => $this->thinQ_token ));
             return $call->sid;
         }catch(Exception $e){
             return $e->getMessage();
